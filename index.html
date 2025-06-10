@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ประตูรั้วหน้าบ้าน</title>
+    <meta name="description" content="ผู้เชี่ยวชาญด้านการออกแบบและติดตั้งประตูรั้วหน้าบ้านทุกชนิด ประตูรั้วเหล็ก ประตูสแตนเลส ประตูอลูมิเนียมลายไม้ และประตูรีโมทอัตโนมัติ สวยงาม ทนทาน ราคาเป็นกันเอง">
+    <meta name="keywords" content="ประตูรั้วหน้าบ้าน, ประตูรั้ว, ประตูเหล็ก, ประตูสแตนเลส, ประตูรีโมท, ประตูอัตโนมัติ, บางพลี, สมุทรปราการ">
+    
+    <!-- Google Fonts for Thai Language -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        /* --- Basic Reset & Global Styles --- */
+        :root {
+            --primary-color: #ffc107; /* Yellow, similar to template */
+            --dark-color: #212529;
+            --light-color: #f8f9fa;
+            --grey-color: #6c757d;
+            --white-color: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Kanit', sans-serif;
+            line-height: 1.6;
+            background-color: var(--light-color);
+            color: var(--dark-color);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 0 20px;
+        }
+
+        h1, h2, h3 {
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            color: var(--dark-color);
+        }
+        
+        h2::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background-color: var(--primary-color);
+            margin: 10px auto 0;
+        }
+
+        section {
+            padding: 60px 0;
+        }
+
+        a {
+            text-decoration: none;
+            color: var(--primary-color);
+        }
+
+        /* --- Header --- */
+        .main-header {
+            background-color: var(--white-color);
+            padding: 1rem 0;
+            border-bottom: 3px solid var(--primary-color);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo i {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-right: 15px;
+        }
+
+        .logo-text h1 {
+            margin: 0;
+            font-size: 1.8rem;
+            color: var(--dark-color);
+        }
+        
+        .logo-text p {
+            margin: 0;
+            color: var(--grey-color);
+            font-size: 0.9rem;
+        }
+
+        .contact-info {
+            text-align: right;
+        }
+
+        .contact-info .phone {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--dark-color);
+        }
+        .contact-info .phone a {
+            color: inherit;
+        }
+
+        .contact-info .social-links a {
+            color: var(--dark-color);
+            font-size: 1.5rem;
+            margin-left: 15px;
+            transition: color 0.3s ease;
+        }
+
+        .contact-info .social-links a:hover {
+            color: var(--primary-color);
+        }
+        
+        /* --- Navigation --- */
+        nav {
+            background-color: var(--dark-color);
+        }
+        
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+        }
+        
+        nav ul li a {
+            display: block;
+            color: var(--white-color);
+            padding: 15px 25px;
+            font-weight: 500;
+            transition: background-color 0.3s ease;
+        }
+        
+        nav ul li a:hover, nav ul li a.active {
+            background-color: var(--primary-color);
+            color: var(--dark-color);
+        }
+
+        /* --- Hero Section --- */
+        .hero {
+            height: 60vh;
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=2000&auto=format&fit=crop') no-repeat center center/cover;
+            color: var(--white-color);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+
+        .hero .btn {
+            background-color: var(--primary-color);
+            color: var(--dark-color);
+            padding: 12px 30px;
+            border-radius: 5px;
+            font-weight: 700;
+            font-size: 1rem;
+            transition: transform 0.3s ease;
+        }
+        
+        .hero .btn:hover {
+            transform: scale(1.05);
+        }
+
+        /* --- About Section --- */
+        #about {
+            background: var(--white-color);
+        }
+
+        .about-content {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+        }
+        
+        .about-text { flex: 1; }
+        .about-image { flex: 1; }
+        .about-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        /* --- Products Section --- */
+        #products {
+            background: var(--light-color);
+        }
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .product-card {
+            background: var(--white-color);
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            overflow: hidden;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+
+        .product-card img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+        }
+
+        .product-card-content {
+            padding: 20px;
+        }
+
+        .product-card h3 {
+            font-size: 1.3rem;
+            margin: 0;
+            color: var(--dark-color);
+        }
+        
+        /* --- Why Us Section --- */
+        #why-us {
+             background: var(--white-color);
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            text-align: center;
+        }
+        
+        .feature-item i {
+            font-size: 3rem;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+        
+        .feature-item h3 {
+             font-size: 1.4rem;
+        }
+        
+        .feature-item p {
+            color: var(--grey-color);
+        }
+        
+        /* --- Contact Section --- */
+        #contact {
+            background: var(--light-color);
+        }
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 40px;
+            align-items: flex-start;
+        }
+        
+        .contact-details-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 20px;
+        }
+        
+        .contact-details-item i {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            width: 40px;
+            margin-top: 5px;
+        }
+        
+        .contact-details-item span {
+            font-size: 1.1rem;
+        }
+        .contact-details-item a {
+            font-size: 1.1rem;
+            color: var(--dark-color);
+            font-weight: 500;
+        }
+        .contact-details-item a:hover {
+            color: var(--primary-color);
+        }
+        
+        .map-container iframe {
+            width: 100%;
+            height: 400px;
+            border: 0;
+            border-radius: 8px;
+        }
+        
+        /* --- Footer --- */
+        footer {
+            background-color: var(--dark-color);
+            color: var(--white-color);
+            padding: 50px 0 0;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+            margin-bottom: 40px;
+        }
+        
+        .footer-info h3 {
+            color: var(--primary-color);
+            font-size: 1.8rem;
+        }
+        .footer-info p {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: flex-start;
+            color: var(--light-color);
+        }
+
+        .footer-info i {
+            margin-right: 15px;
+            margin-top: 5px;
+            width: 20px;
+            color: var(--primary-color);
+        }
+        .footer-info a {
+            color: var(--white-color);
+        }
+        .footer-info a:hover {
+            color: var(--primary-color);
+        }
+
+        .footer-map iframe {
+            width: 100%;
+            height: 300px;
+            border: 0;
+            border-radius: 8px;
+        }
+
+        .copyright-bar {
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 40px;
+            border-top: 1px solid var(--grey-color);
+            font-size: 0.9rem;
+        }
+
+        /* --- Responsive --- */
+        @media(max-width: 992px) {
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media(max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            .logo {
+                margin-bottom: 1rem;
+            }
+            .contact-info {
+                text-align: center;
+            }
+            nav ul {
+                flex-direction: column;
+                text-align: center;
+            }
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            .about-content {
+                flex-direction: column;
+            }
+             h2 {
+                font-size: 2rem;
+            }
+            .footer-grid {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            .footer-info p {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ================== HEADER ================== -->
+    <header class="main-header">
+        <div class="container header-content">
+            <div class="logo">
+                <i class="fa-solid fa-dungeon"></i>
+                <div class="logo-text">
+                    <h1>ประตูรั้วหน้าบ้าน</h1>
+                    <p>ออกแบบ ติดตั้ง ประตูรั้วครบวงจร</p>
+                </div>
+            </div>
+            <div class="contact-info">
+                <div class="phone">
+                    <i class="fa-solid fa-phone"></i> <a href="tel:0635352739">063-535-2739</a>
+                </div>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-square"></i></a>
+                    <a href="#" aria-label="Line"><i class="fab fa-line"></i></a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ================== NAVIGATION ================== -->
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="#home">หน้าแรก</a></li>
+                <li><a href="#products">สินค้าและบริการ</a></li>
+                <li><a href="#about">เกี่ยวกับเรา</a></li>
+                <li><a href="#contact">ติดต่อเรา</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <main>
+    
+        <!-- ================== HERO SECTION ================== -->
+        <section id="home" class="hero">
+            <h1>ประตูรั้วหน้าบ้าน สวย ทนทาน</h1>
+            <p>เพิ่มความสวยงามและความปลอดภัยให้กับบ้านของคุณด้วยประตูรั้วคุณภาพ</p>
+            <a href="#contact" class="btn">ปรึกษาและประเมินราคา ฟรี!</a>
+        </section>
+
+        <!-- ================== PRODUCTS SECTION ================== -->
+        <section id="products">
+            <div class="container">
+                <h2>สินค้าและบริการของเรา</h2>
+                <div class="product-grid">
+                    <div class="product-card">
+                        <img src="https://i.imgur.com/uG9XlJ2.jpg" alt="ประตูรั้วเหล็กดัด">
+                        <div class="product-card-content">
+                            <h3>ประตูรั้วเหล็ก สไตล์โมเดิร์น</h3>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <img src="https://i.imgur.com/V9iXb5M.jpg" alt="ประตูรั้วสแตนเลส">
+                        <div class="product-card-content">
+                            <h3>ประตูรั้วสแตนเลส</h3>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <img src="https://i.imgur.com/gK9fI5w.jpg" alt="ประตูรั้วอลูมิเนียมลายไม้">
+                        <div class="product-card-content">
+                            <h3>ประตูรั้วอลูมิเนียมลายไม้</h3>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <img src="https://i.imgur.com/zN2rW2Y.jpg" alt="ประตูรั้วอัตโนมัติ">
+                        <div class="product-card-content">
+                            <h3>ประตูรั้วรีโมทอัตโนมัติ</h3>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <img src="https://i.imgur.com/b9Jc6nO.jpg" alt="ประตูรั้วบานเลื่อน">
+                        <div class="product-card-content">
+                            <h3>ประตูรั้วบานเลื่อน/บานสวิง</h3>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <img src="https://i.imgur.com/5l8r9bT.jpg" alt="ประตูรั้วเหล็กฉลุลาย">
+                        <div class="product-card-content">
+                            <h3>ประตูรั้วเหล็กฉลุลาย (CNC)</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================== ABOUT US SECTION ================== -->
+        <section id="about">
+            <div class="container">
+                <div class="about-content">
+                    <div class="about-text">
+                        <h2>เกี่ยวกับ "ประตูรั้วหน้าบ้าน"</h2>
+                        <p>เราคือผู้เชี่ยวชาญด้านการออกแบบ ผลิต และติดตั้งประตูรั้วหน้าบ้าน ประตูรั้วโรงงาน และรั้วบ้านทุกชนิด ด้วยประสบการณ์ยาวนานกว่า 15 ปี เรามุ่งมั่นที่จะสร้างสรรค์ผลงานคุณภาพที่ผสมผสานทั้งความสวยงาม ความแข็งแรงทนทาน และฟังก์ชันการใช้งานที่ตอบโจทย์ไลฟ์สไตล์ของลูกค้า</p>
+                        <p>เราเลือกใช้วัสดุเกรดพรีเมียม ไม่ว่าจะเป็นเหล็ก สแตนเลส หรืออลูมิเนียม พร้อมทีมงานช่างมืออาชีพที่ใส่ใจในทุกรายละเอียด ตั้งแต่การวัดพื้นที่หน้างาน การออกแบบ จนถึงการติดตั้งที่ได้มาตรฐาน เพื่อให้คุณมั่นใจได้ว่าจะได้รับประตูรั้วที่ดีที่สุดสำหรับบ้านของคุณ</p>
+                    </div>
+                    <div class="about-image">
+                        <img src="https://i.imgur.com/rN5h00p.jpg" alt="ทีมงานติดตั้งประตูรั้วหน้าบ้าน">
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- ================== WHY CHOOSE US SECTION ================== -->
+        <section id="why-us">
+            <div class="container">
+                <h2>ทำไมต้องเลือกเรา</h2>
+                <div class="features-grid">
+                    <div class="feature-item">
+                        <i class="fas fa-medal"></i>
+                        <h3>วัสดุคุณภาพสูง</h3>
+                        <p>เราคัดสรรเหล็กและสแตนเลสคุณภาพดี แข็งแรง ทนทานต่อทุกสภาพอากาศ</p>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-palette"></i>
+                        <h3>ดีไซน์สวยงาม</h3>
+                        <p>มีแบบให้เลือกหลากหลาย ทั้งโมเดิร์นและคลาสสิก หรือออกแบบตามความต้องการ</p>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-tools"></i>
+                        <h3>ทีมงานมืออาชีพ</h3>
+                        <p>ทีมช่างผู้ชำนาญการ มีประสบการณ์ ติดตั้งเรียบร้อย ได้มาตรฐาน</p>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-handshake"></i>
+                        <h3>บริการครบวงจร</h3>
+                        <p>ให้คำปรึกษา ออกแบบ ผลิต ติดตั้ง และบริการหลังการขายที่น่าประทับใจ</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================== CONTACT SECTION ================== -->
+        <section id="contact">
+            <div class="container">
+                <h2>ติดต่อเรา</h2>
+                <div class="contact-grid">
+                    <div class="contact-details">
+                        <h3>ประตูรั้วหน้าบ้าน</h3>
+                        <p>สอบถามข้อมูลเพิ่มเติม หรือขอใบเสนอราคาได้เลย เรายินดีให้บริการ</p>
+                        <div class="contact-details-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>48 ซอย อัมพร ตำบล บางพลีใหญ่ อำเภอบางพลี สมุทรปราการ 10540</span>
+                        </div>
+                        <div class="contact-details-item">
+                            <i class="fas fa-phone"></i>
+                            <a href="tel:0635352739">063-535-2739</a>
+                        </div>
+                        <div class="contact-details-item">
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:contact@pratu-rua-baan.com">contact@pratu-rua-baan.com</a>
+                        </div>
+                         <div class="contact-details-item">
+                            <i class="fab fa-line"></i>
+                            <a href="#">@pratu.design</a>
+                        </div>
+                    </div>
+                    <div class="map-container">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3878.715202465069!2d100.6764092!3d13.6196459!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x311d5f5274990c59%3A0xdb7b130c0d854a54!2z4Lib4Lij4Liw4LiV4Li54Lij4Lix4LmJ4Lin4Lir4LiZ4LmJ4Liy4Lia4LmJ4Liy4LiZ!5e0!3m2!1sen!2sth!4v1719545809561!5m2!1sen!2sth" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+    </main>
+    
+    <!-- ================== FOOTER ================== -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-info">
+                    <h3>ประตูรั้วหน้าบ้าน</h3>
+                    <p>
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>48 ซอย อัมพร ตำบล บางพลีใหญ่ อำเภอบางพลี สมุทรปราการ 10540</span>
+                    </p>
+                    <p>
+                        <i class="fas fa-phone"></i>
+                        <a href="tel:0635352739">063-535-2739</a>
+                    </p>
+                </div>
+                <div class="footer-map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3878.715202465069!2d100.6764092!3d13.6196459!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x311d5f5274990c59%3A0xdb7b130c0d854a54!2z4Lib4Lij4Liw4LiV4Li54Lij4Lix4LmJ4Lin4Lir4LiZ4LmJ4Liy4Lia4LmJ4Liy4LiZ!5e0!3m2!1sen!2sth!4v1719545809561!5m2!1sen!2sth" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-downgrade"></iframe>
+                </div>
+            </div>
+            <div class="copyright-bar">
+                <p>&copy; 2024 ประตูรั้วหน้าบ้าน. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
